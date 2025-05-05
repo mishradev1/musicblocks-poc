@@ -18,7 +18,7 @@ export default function ExecutionControls({
         <div className="flex space-x-2">
           <button
             onClick={onStepBackward}
-            className="p-2 bg-gray-800 hover:bg-gray-700 rounded"
+            className="p-2 rounded-full bg-white text-[#2196f3] hover:bg-[#e3f2fd] border border-[#bbdefb] transition-colors"
             title="Step backward"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -30,7 +30,7 @@ export default function ExecutionControls({
           {isPlaying ? (
             <button
               onClick={onPause}
-              className="p-2 bg-gray-800 hover:bg-gray-700 rounded" 
+              className="p-2 rounded-full bg-white text-[#2196f3] hover:bg-[#e3f2fd] border border-[#bbdefb] transition-colors" 
               title="Pause"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -41,7 +41,7 @@ export default function ExecutionControls({
           ) : (
             <button
               onClick={onPlay}
-              className="p-2 bg-blue-600 hover:bg-blue-700 rounded" 
+              className="p-2 rounded-full bg-[#4caf50] text-white hover:bg-[#43a047] transition-colors" 
               title="Play"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -52,7 +52,7 @@ export default function ExecutionControls({
           
           <button
             onClick={onStop}
-            className="p-2 bg-gray-800 hover:bg-gray-700 rounded" 
+            className="p-2 rounded-full bg-white text-[#2196f3] hover:bg-[#e3f2fd] border border-[#bbdefb] transition-colors" 
             title="Stop"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -62,7 +62,7 @@ export default function ExecutionControls({
           
           <button
             onClick={onStepForward}
-            className="p-2 bg-gray-800 hover:bg-gray-700 rounded" 
+            className="p-2 rounded-full bg-white text-[#2196f3] hover:bg-[#e3f2fd] border border-[#bbdefb] transition-colors" 
             title="Step forward"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -74,7 +74,7 @@ export default function ExecutionControls({
         
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <span className="text-sm text-gray-400">Speed:</span>
+            <span className="text-sm text-gray-600">Speed:</span>
             <input
               type="range"
               min="0.25"
@@ -82,12 +82,12 @@ export default function ExecutionControls({
               step="0.25"
               value={executionSpeed}
               onChange={(e) => onSpeedChange(parseFloat(e.target.value))}
-              className="w-24 accent-blue-600"
+              className="w-24 accent-[#2196f3]"
             />
-            <span className="text-sm w-8">{executionSpeed}x</span>
+            <span className="text-sm w-8 text-gray-600">{executionSpeed}x</span>
           </div>
           
-          <div className="text-sm text-gray-400">
+          <div className="text-sm text-gray-600 bg-white px-3 py-1 rounded border border-gray-200">
             Step: {currentStep + 1} / {totalSteps}
           </div>
         </div>
